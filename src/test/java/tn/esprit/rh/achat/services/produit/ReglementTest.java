@@ -9,13 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import tn.esprit.rh.achat.entities.Produit;
-import tn.esprit.rh.achat.entities.Stock;
+import tn.esprit.rh.achat.entities.Reglement;
+import tn.esprit.rh.achat.entities.Facture;
 import tn.esprit.rh.achat.repositories.FactureRepository;
-import tn.esprit.rh.achat.repositories.ProduitRepository;
-import tn.esprit.rh.achat.repositories.StockRepository;
-import tn.esprit.rh.achat.services.IProduitService;
-import tn.esprit.rh.achat.services.IStockService;
+import tn.esprit.rh.achat.repositories.ReglementRepository;
+import tn.esprit.rh.achat.services.IFactureService;
+import tn.esprit.rh.achat.services.IReglementService;
 
 import org.junit.runner.RunWith;
 
@@ -40,24 +39,24 @@ import static org.mockito.Mockito.times;
 @RunWith(SpringRunner.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @ExtendWith(MockitoExtension.class)
-public class ProduitServiceTest {
+public class ReglementServiceTest {
  
     @Autowired
-    IProduitService ps;
+    IReglementService ps;
     
     @Autowired
-    IStockService ss;
+    IFactureService ss;
 
     @MockBean
-	private ProduitRepository pr;
+	private ReglementRepository pr;
     
      @MockBean
-     private StockRepository SR;
+     private FactureRepository SR;
    
    
-    Produit p1=new Produit(1L,"p1","iphone",5000,new Date(),new Date(),null,null,null);
-    Produit p2=new Produit(1L,"p2","samsung",4000,new Date(),new Date(),null,null,null);
-    Stock S=new Stock(1L,"S1",50,5,null);
+    Reglement p1=new Produit(1L,"p1",2.400,3.400,"True",new Date(),null);
+    Reglement p2=new Produit(1L,"p1",2.600,3.600,"True",new Date(),null);
+    Facture S=new Stock(1L,"S1",50,5,null);
     
    
     
