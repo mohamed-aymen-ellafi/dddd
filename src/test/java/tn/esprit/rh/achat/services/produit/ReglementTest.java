@@ -56,7 +56,7 @@ public class ReglementServiceTest {
    
     Reglement p1=new Produit(1L,"p1",2.400,3.400,"True",new Date(),null);
     Reglement p2=new Produit(1L,"p1",2.600,3.600,"True",new Date(),null);
-    Facture S=new Stock(1L,"S1",50,5,null);
+    Facture S=new Stock(1L,"S1",5.6,7.6,new Date(),new Date,True(),null,null,null);
     
    
     
