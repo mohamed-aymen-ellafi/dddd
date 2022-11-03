@@ -1,4 +1,4 @@
-/*package tn.esprit.rh.achat.services.produit;
+package tn.esprit.rh.achat.services.produit;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.Test;
@@ -54,8 +54,8 @@ public class ReglementServiceTest {
      private FactureRepository SR;
    
    
-    Reglement p1=new Produit(1L,"p1",2.400,3.400,"True",new Date(),null);
-    Reglement p2=new Produit(1L,"p1",2.600,3.600,"True",new Date(),null);
+    Reglement p1=new Reglement(1L,"p1",2.400,3.400,"True",new Date(),null);
+    Reglement p2=new Reglement(1L,"p1",2.600,3.600,"True",new Date(),null);
     Facture S=new Stock(1L,"S1",5.6,7.6,new Date(),new Date(),True,null,null,null);
     
    
@@ -71,10 +71,10 @@ public class ReglementServiceTest {
     
     
     @Test
-	public void addProduitTest() {
+	public void addReglementTest() {
     	when(pr.save(p1)).thenReturn(p1);
     	assertNotNull(p1);
-		assertEquals(p1, ps.addProduit(p1));
+		assertEquals(p1, ps.addReglement(p1));
     	System.out.println("Add produits works !");
 	}
 
@@ -108,4 +108,4 @@ public void UpdatePorduitTest() {
 
 
 }
-*/
+
