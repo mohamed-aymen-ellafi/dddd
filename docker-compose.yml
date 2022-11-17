@@ -8,10 +8,12 @@ services:
     volumes:
       - db:/var/lib/mysql
     ports:
-      - 3306:3306
+      - 3309:3306
     environment:
       MYSQL_DATABASE: achat
       MYSQL_ROOT_PASSWORD: achat
+    networks:
+      - AppNet
   app:
     depends_on:
       - mysqldb
@@ -23,5 +25,10 @@ services:
       MYSQL_HOST: mysqlCICD
       MYSQL_USER: root
       MYSQL_PASSWORD: achat
+    networks:
+      - AppNet
 volumes:
   db:
+networks:
+  AppNet:
+    name: AppNet
