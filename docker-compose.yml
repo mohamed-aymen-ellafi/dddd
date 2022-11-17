@@ -31,4 +31,3 @@ volumes:
   db:
 networks:
   AppNet:
-    name: AppNet
