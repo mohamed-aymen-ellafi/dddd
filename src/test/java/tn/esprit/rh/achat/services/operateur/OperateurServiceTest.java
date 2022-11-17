@@ -1,6 +1,7 @@
 package tn.esprit.rh.achat.services.operateur;
 
 import lombok.extern.slf4j.Slf4j;
+
 import org.junit.Test;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -12,12 +13,12 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.core.annotation.Order;
 import org.springframework.test.context.junit4.SpringRunner;
 import tn.esprit.rh.achat.entities.Operateur;
 import tn.esprit.rh.achat.repositories.OperateurRepository;
 import tn.esprit.rh.achat.services.IOperateurService;
 import tn.esprit.rh.achat.services.OperateurServiceImpl;
+import org.junit.jupiter.api.Order;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
