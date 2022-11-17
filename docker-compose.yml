@@ -33,7 +33,7 @@ services:
     ports:
       - 4200:4200
     depends_on:
-      - spring-boot
+      - app
     networks:
       - AppNet
 volumes:
