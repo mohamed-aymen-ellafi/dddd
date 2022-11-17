@@ -27,6 +27,15 @@ services:
       spring.datasource.password: achat
     networks:
       - AppNet
+  angular:
+    image: khaoulahadrouchi/frontproject
+    container_name: angular
+    ports:
+      - 4200:4200
+    depends_on:
+      - spring-boot
+    networks:
+      - AppNet
 volumes:
   db:
 networks:
