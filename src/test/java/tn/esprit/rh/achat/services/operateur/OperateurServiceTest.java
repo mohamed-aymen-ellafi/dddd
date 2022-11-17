@@ -104,7 +104,7 @@ public class OperateurServiceTest  {
 			assertAll("add operator",
 					() -> assertNotNull(o.getIdOperateur()),
 					() -> assertEquals(o.getNom(), operateur.getNom()),
-					() -> assertEquals(o.getPrenom(), operateur.getPassword())
+					() -> assertEquals(o.getPrenom(), operateur.getPrenom())
 			);
 		});
 		savedOperateurs = ios.retrieveAllOperateurs();
@@ -123,15 +123,6 @@ public class OperateurServiceTest  {
 		log.info("operator deleted successfully");
 	}
 
-	@Test
-	@Order(7)
-	public void retrieveop() {
-		savedOperateurs.forEach(operateur -> {
-			ios.retrieveOperateur(operateur.getIdOperateur());
-		});
-		assertEquals(operateur, ios.retrieveOperateur(operateur.getIdOperateur()));
-		log.info("operator deleted successfully");
-	}
 
 
 }
